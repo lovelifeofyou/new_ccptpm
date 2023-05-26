@@ -13,6 +13,7 @@ db.connect()
 const port = 3000
 app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname,'public')))
+// app.use('/public', express.static(path.join(__dirname, '/img')))
 app.engine('hbs',handlebars.engine({extname:'.hbs',
     helpers: require('./helper/handlebars')
 }))
